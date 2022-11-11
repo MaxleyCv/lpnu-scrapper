@@ -48,7 +48,7 @@ class ZoomEnter:
 
         mute_button = self.driver.find_element(By.ID, 'mic-btn')
 
-        
+
 
         time.sleep(1000)
 
