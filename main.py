@@ -10,4 +10,5 @@ if __name__ == '__main__':
         link = schedule.get_current_link()
         if link:
             zoom.enter_link(link)
-        time.sleep(1000)
+            zoom.refresh()
+        time.sleep(60)

@@ -43,17 +43,16 @@ class ZoomEnter:
         input_name = self.driver.find_element(By.ID, 'inputname')
         input_name.send_keys('Максим Ліщинський')
 
+        mute_button = self.driver.find_element(By.ID, 'mic-btn')
+        mute_button.click()
+
+        cam_button = self.driver.find_element(By.ID, 'video-btn')
+        cam_button.click()
+
         join_button = self.driver.find_element(By.ID, 'joinBtn')
         join_button.click()
 
-        mute_button = self.driver.find_element(By.ID, 'mic-btn')
+        time.sleep(3600)
 
-
-
-        time.sleep(1000)
-
-
-zoom = ZoomEnter()
-zoom.enter_link('https://softserveinc.zoom.us/j/99979302138?pwd=dzlMdjgyUXpjcUtSc05oWDd1c3Z6Zz09')
-
-
+    def refresh(self):
+        self.driver.close()
